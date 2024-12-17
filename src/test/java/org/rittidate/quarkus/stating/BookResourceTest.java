@@ -41,6 +41,7 @@ public class BookResourceTest {
             .get("/api/books/{id}")
         .then()
             .statusCode(200)
-            .body("title", is("Understanding Quarkus"));
+            .body("title", is("Understanding Quarkus"))
+            .body("genre", is("IT"));
     }
 }
